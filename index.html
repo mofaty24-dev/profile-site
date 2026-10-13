@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohamed Fathy, Generative AI Engineer</title>
+  <meta name="description" content="Mohamed Fathy builds RAG systems and agentic AI: retrieval pipelines, tool-calling agents and the interfaces around them. Based in Giza, Egypt.">
+  <meta name="theme-color" content="#040705">
+  <meta property="og:title" content="Mohamed Fathy, Generative AI Engineer">
+  <meta property="og:description" content="RAG systems and agentic AI. See the projects and send a message.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23040705'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%2335f48a' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%2335f48a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Martian+Mono:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="field" aria-hidden="true"></canvas>
+  <a class="skip" href="#profile">Skip to content</a>
+
+  <div class="shell">
+    <aside class="rail" aria-label="Site">
+      <a class="rail-mark" href="#top">Mohamed Fathy</a>
+      <nav class="rail-nav" aria-label="Sections">
+        <a href="#top" data-nav="top">Home</a>
+        <a href="#profile" data-nav="profile">Profile</a>
+        <a href="#projects" data-nav="projects">Projects</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </nav>
+      <dl class="rail-read">
+        <div><dt>Time in Giza</dt><dd id="clock">--:--</dd></div>
+        <div><dt>Scrolled</dt><dd id="scrollpct">0%</dd></div>
+        <div><dt>Status</dt><dd class="lit">Open to projects</dd></div>
+      </dl>
+    </aside>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-text">
+          <p class="boot" id="boot" aria-hidden="true"></p>
+          <h1 id="name">Mohamed Fathy</h1>
+          <p class="role">Generative AI Engineer. RAG systems and agentic AI.</p>
+          <p class="lede">I build AI systems that answer from real data and act through tools, with a person approving anything that leaves the system.</p>
+          <div class="actions">
+            <a class="btn btn-solid" href="#projects">See projects</a>
+            <a class="btn" href="https://drive.google.com/file/d/1oC8REyUMx4zKM8OI9V7vEgQ9Fd2VgRSX/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Open CV</a>
+            <a class="btn" href="#contact">Send a message</a>
+          </div>
+        </div>
+        <figure class="hero-eye">
+          <canvas id="eye" role="img" aria-label="An animated robotic eye that follows your cursor"></canvas>
+        </figure>
+      </section>
+
+      <section class="block" id="profile" aria-labelledby="h-profile">
+        <h2 id="h-profile">Profile</h2>
+        <div class="profile-grid">
+          <div class="prose">
+            <p>I design retrieval pipelines, tool-calling agents and the interfaces around them. The work centres on grounded answers: the model reads from a defined source, shows where an answer came from, and asks for approval before it sends or changes anything.</p>
+            <p>My projects cover document question answering on Azure, an email agent with human approval, and a business analyst agent that chooses between analysis tools on its own.</p>
+            <p>Based in Giza, Egypt. Available for freelance AI projects.</p>
+          </div>
+          <div class="skills">
+            <h3>Retrieval</h3>
+            <ul class="chips">
+              <li>RAG pipelines</li><li>Hybrid retrieval</li><li>Token-based chunking</li><li>Azure AI Search</li><li>HNSW vector indexes</li><li>Source attribution</li>
+            </ul>
+            <h3>Agents</h3>
+            <ul class="chips">
+              <li>LangChain</li><li>Tool calling</li><li>ReAct loops</li><li>Human-in-the-loop</li><li>MCP</li><li>n8n workflows</li>
+            </ul>
+            <h3>Models</h3>
+            <ul class="chips">
+              <li>Azure OpenAI</li><li>Hugging Face Transformers</li><li>PyTorch</li><li>Ollama</li><li>OpenRouter</li>
+            </ul>
+            <h3>Engineering</h3>
+            <ul class="chips">
+              <li>Python</li><li>SQL</li><li>Gradio</li><li>Git and GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="projects" aria-labelledby="h-projects">
+        <h2 id="h-projects">Projects</h2>
+        <p class="section-note">Hover a screenshot to zoom, click it to open full size. Click the video to run the demo.</p>
+
+        <!-- AI Email Assistant -->
+        <article class="unit" aria-labelledby="p-email">
+          <div class="unit-media">
+            <div class="viewport video" id="vid-wrap">
+              <video id="demo" poster="assets/email-assistant-poster.jpg" preload="metadata" playsinline>
+                <source src="assets/email-assistant.mp4" type="video/mp4">
+                <source src="assets/email-assistant.webm" type="video/webm">
+                Your browser can't play this video. <a href="assets/email-assistant.mp4">Download the demo</a>.
+              </video>
+              <button class="big-play" id="big-play" type="button" aria-label="Run the demo video"><span>Run demo</span></button>
+              <div class="vbar" id="vbar">
+                <button type="button" id="v-toggle" aria-label="Play">Play</button>
+                <input type="range" id="v-seek" min="0" max="1000" value="0" aria-label="Seek">
+                <span id="v-time">0:00</span>
+                <button type="button" id="v-mute" aria-label="Unmute">Sound off</button>
+                <button type="button" id="v-full" aria-label="Full screen">Full screen</button>
+              </div>
+            </div>
+            <p class="caption">Demo of the agent chat, with tool calls visible while it works.</p>
+          </div>
+          <div class="unit-body">
+            <p class="status"><span class="dot lit"></span>Working demo recorded</p>
+            <h3 id="p-email">AI Email Assistant</h3>
+            <p>Reads incoming email, classifies it, drafts a reply and sends only after you approve. The agent runs on LangChain and shows each tool call in the chat, so you can see why it acted.</p>
+            <ul class="chips"><li>LangChain</li><li>Tool calling</li><li>Human-in-the-loop</li><li>Python</li></ul>
+            <p class="unit-links"><a class="link" href="https://github.com/mofaty24-dev/Email_Agent" target="_blank" rel="noopener noreferrer">Source code on GitHub</a></p>
+          </div>
+        </article>
+
+        <!-- AI Business Analyst -->
+        <article class="unit" aria-labelledby="p-analyst">
+          <div class="unit-media">
+            <button class="viewport shot" type="button" data-full="assets/business-analyst.png" data-alt="AI Business Analyst interface showing a loaded sales file of 541,909 rows and a monthly revenue bar chart from December 2010 to December 2011" aria-label="Open the AI Business Analyst screenshot full size">
+              <img src="assets/business-analyst.png" alt="AI Business Analyst interface showing a loaded sales file of 541,909 rows and a monthly revenue bar chart" width="1370" height="877" loading="lazy">
+              <span class="lens" aria-hidden="true"></span>
+            </button>
+            <p class="caption">Monthly revenue chart built from a 541,909-row sales file.</p>
+          </div>
+          <div class="unit-body">
+            <p class="status"><span class="dot lit"></span>Team project, code on GitHub</p>
+            <h3 id="p-analyst">AI Business Analyst</h3>
+            <p>Ask questions about a sales file in plain language. A model picks from five hand-coded analysis tools (total revenue, monthly sales, top products, customer statistics, period comparison) and a ReAct-style loop runs them. Built with a teammate in Python, with OpenRouter models and a Gradio interface.</p>
+            <ul class="chips"><li>Python</li><li>ReAct agent loop</li><li>OpenRouter</li><li>Gradio</li></ul>
+            <p class="unit-links"><a class="link" href="https://github.com/mofaty24-dev/AI-Business-Analyst" target="_blank" rel="noopener noreferrer">Source code on GitHub</a></p>
+          </div>
+        </article>
+
+        <!-- RAG Agent -->
+        <article class="unit" aria-labelledby="p-rag">
+          <div class="unit-media">
+            <button class="viewport shot" type="button" data-full="assets/rag-agent.png" data-alt="Current local interface of the RAG Agent: a question box, an Ask button and an answer area" aria-label="Open the RAG Agent screenshot full size">
+              <img src="assets/rag-agent.png" alt="Current local interface of the RAG Agent: a question box, an Ask button and an answer area" width="1236" height="640" loading="lazy">
+              <span class="lens" aria-hidden="true"></span>
+            </button>
+            <p class="caption">Current local interface. A full interface is being built.</p>
+          </div>
+          <div class="unit-body">
+            <p class="status"><span class="dot"></span>Live demo coming soon</p>
+            <h3 id="p-rag">RAG Agent</h3>
+            <p>A profile assistant that answers questions from a source document and shows where each answer came from. It combines keyword and vector retrieval over token-based chunks (256 tokens, 50 overlap), indexes with Azure AI Search using HNSW, and generates with Azure OpenAI GPT-4o-mini.</p>
+            <ul class="chips"><li>Hybrid retrieval</li><li>Azure AI Search</li><li>Azure OpenAI</li><li>LangChain</li></ul>
+            <p class="unit-links"><a class="link" href="https://github.com/mofaty24-dev/RAG-System" target="_blank" rel="noopener noreferrer">Source code on GitHub</a></p>
+          </div>
+        </article>
+      </section>
+
+      <section class="block" id="contact" aria-labelledby="h-contact">
+        <h2 id="h-contact">Contact</h2>
+        <div class="contact-grid">
+          <div class="prose">
+            <p>Describe the project you have in mind. Your message goes straight to my inbox and I reply to the address you enter.</p>
+            <ul class="contact-links">
+              <li><a class="link" href="mailto:mofaty24@gmail.com">mofaty24@gmail.com</a></li>
+              <li><a class="link" href="https://github.com/mofaty24-dev" target="_blank" rel="noopener noreferrer">github.com/mofaty24-dev</a></li>
+              <li><a class="link" href="https://www.linkedin.com/in/mohamed-fathy-9b585b401" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></li>
+              <li><a class="link" href="https://drive.google.com/file/d/1oC8REyUMx4zKM8OI9V7vEgQ9Fd2VgRSX/view?usp=drive_link" target="_blank" rel="noopener noreferrer">CV on Google Drive</a></li>
+            </ul>
+          </div>
+
+          <form id="contact-form" class="form" novalidate>
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" maxlength="120" required aria-describedby="e-name">
+              <p class="err" id="e-name"></p>
+            </div>
+            <div class="field">
+              <label for="f-email">Email address</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" maxlength="200" required aria-describedby="e-email">
+              <p class="err" id="e-email"></p>
+            </div>
+            <div class="field">
+              <label for="f-message">Project details</label>
+              <textarea id="f-message" name="message" rows="6" maxlength="4000" required aria-describedby="e-message"></textarea>
+              <p class="err" id="e-message"></p>
+            </div>
+            <div class="trap" aria-hidden="true">
+              <label for="f-company">Company</label>
+              <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="form-row">
+              <button class="btn btn-solid" id="f-submit" type="submit">Send message</button>
+              <p class="form-status" id="f-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer class="foot">
+        <p>Mohamed Fathy, Giza, Egypt</p>
+      </footer>
+    </main>
+  </div>
+
+  <dialog id="viewer" aria-label="Screenshot viewer">
+    <button type="button" class="viewer-close" id="viewer-close">Close</button>
+    <img id="viewer-img" alt="">
+  </dialog>
+
+  <script src="main.js"></script>
+</body>
+</html>
