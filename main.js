@@ -373,16 +373,15 @@
   /* ------------------------------------------------------------------
      Demo video controls
   ------------------------------------------------------------------ */
-  (function () {
-    var wrap = document.getElementById('vid-wrap');
-    var v = document.getElementById('demo');
-    if (!wrap || !v) return;
-    var big = document.getElementById('big-play');
-    var tog = document.getElementById('v-toggle');
-    var seek = document.getElementById('v-seek');
-    var time = document.getElementById('v-time');
-    var mute = document.getElementById('v-mute');
-    var full = document.getElementById('v-full');
+  Array.prototype.forEach.call(document.querySelectorAll('[data-player]'), function (wrap) {
+    var v = wrap.querySelector('video');
+    if (!v) return;
+    var big = wrap.querySelector('.big-play');
+    var tog = wrap.querySelector('.v-toggle');
+    var seek = wrap.querySelector('.v-seek');
+    var time = wrap.querySelector('.v-time');
+    var mute = wrap.querySelector('.v-mute');
+    var full = wrap.querySelector('.v-full');
     var seeking = false;
     v.muted = true;
 
@@ -410,7 +409,7 @@
     v.addEventListener('loadedmetadata', function () { time.textContent = '0:00 / ' + fmt(v.duration); });
     seek.addEventListener('input', function () { seeking = true; if (v.duration) v.currentTime = seek.value / 1000 * v.duration; });
     seek.addEventListener('change', function () { seeking = false; });
-    mute.addEventListener('click', function () {
+    if (mute) mute.addEventListener('click', function () {
       v.muted = !v.muted;
       mute.textContent = v.muted ? 'Sound off' : 'Sound on';
       mute.setAttribute('aria-label', v.muted ? 'Unmute' : 'Mute');
@@ -420,7 +419,7 @@
       else if (v.webkitEnterFullscreen) v.webkitEnterFullscreen();
     });
     sync();
-  })();
+  });
 
   /* ------------------------------------------------------------------
      Contact form: posts to /api/contact, which forwards to Zapier.
