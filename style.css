@@ -201,8 +201,8 @@ h3 { margin: 0; font-family: var(--mono); font-weight: 600; font-size: 1rem; let
   font-family: var(--mono); font-size: 0.68rem; padding: 4px 8px; border-radius: 2px; cursor: pointer; white-space: nowrap;
 }
 .vbar button:hover { border-color: var(--phos); color: var(--phos); }
-#v-time { font-family: var(--mono); font-size: 0.68rem; color: var(--text); min-width: 3.2em; }
-#v-seek { flex: 1; min-width: 40px; accent-color: var(--phos); cursor: pointer; }
+.v-time { font-family: var(--mono); font-size: 0.68rem; color: var(--text); min-width: 3.2em; }
+.v-seek { flex: 1; min-width: 40px; accent-color: var(--phos); cursor: pointer; }
 .viewport.video:not(.started) .vbar { display: none; }
 
 /* ---------- viewer dialog ---------- */
